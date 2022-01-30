@@ -1,0 +1,247 @@
+:root{
+    --card-bg-1: linear-gradient(
+        45deg,
+        #d4d4d4,
+        #f7f7f7
+    );
+    --card-bg-2: linear-gradient(
+        45deg,
+        #2E3035,
+        #3a3c41
+    );
+    --card-bg-3: linear-gradient(
+        45deg,
+        #9c0000,
+        #ff0000
+    );
+    --bg-color: #262B2A;
+}
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 1.3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #262B2A;
+}
+/************************* header **************************/
+header{
+    padding: 1rem 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/************************* main **************************/
+main{
+    gap: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    color: white;
+}
+.hero h1{
+    max-width: 23ch;
+}
+.hero P{
+    max-width: 35ch;
+}
+.hero span{
+    font-weight: 100;
+}
+#apply-btn{
+    margin-top: .5rem;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    padding: .5rem;
+    border: .5px white solid;
+    background-color: transparent;
+    color: white;
+    transition: all .3s linear;
+}
+#apply-btn:hover{
+    color: var(--bg-color);
+    background-color: white;
+}
+#apply-btn:active{
+    transform: scale(1.1);
+}
+/************************* Nav **************************/
+nav{
+    display: flex;
+    gap: 1.5rem;
+}
+nav span{
+    cursor: pointer;
+    border-radius: 50px;
+    padding: .5rem;
+    transition: all .3s linear;
+}
+.nav-btn:hover{
+    color: var(--bg-color);
+    background-color: white;
+}
+nav span:active{
+    transform: scale(.91);
+}
+#login{
+    color: var(--bg-color);
+    background-color: white;
+} 
+/********** menu icon ********/
+#menu-icon{
+    cursor: pointer;
+    display: none;
+    transition: all .2s linear
+}
+#menu-icon:hover{
+    transform: scale(1.12);
+}
+#menu-icon:active{
+    transform: scale(.95);
+}
+/*************************cards**************************/
+.card-container{
+    perspective: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    min-width: 225px;
+    border: 1.7px rgb(219, 219, 219) solid;
+    color: rgb(102, 102, 102);
+    border-radius: 10px;
+    max-width: 250px;
+    width: 36%;
+    padding-top: 65px;
+    padding-bottom: .5rem;
+    background-image: var(--card-bg-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(-12deg) rotateX(15deg) rotateZ(10deg);
+    transition: all .3s linear;
+}
+#bg-image-card-1{
+    opacity: .1;
+    object-fit: cover;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+.card:hover{
+    transform: translate(0);
+}
+.sub-info{
+    display: flex;
+    gap: 1rem;
+}
+#visa-img{
+    min-width: 40px;
+    width: 7vw;
+    max-width: 50px;
+    filter: drop-shadow(2px 2px 1px rgb(165, 165, 165));
+}
+/*bold*/
+.bold{
+    font-size: .7rem;
+    color: slategrey;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(206, 206, 206);
+}
+/*card num*/
+.card-num{
+    color: rgb(248, 248, 248);
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px rgb(209, 209, 209);
+}
+/* holder name and expire date*/
+.card-expire-date,
+.card-holder-name{
+    font-size: .95rem;
+    color: steelblue;
+    text-shadow: 1px 1px 1px rgb(177, 177, 177);
+}
+
+/******** card 2 ********/
+#card-2{
+    backdrop-filter: blur(7px);
+    border-color: #3b3d42;
+    background-image: var(--card-bg-2);
+}
+#bg-image-card-2{
+    opacity: .1;
+    object-fit: cover;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+#card-2 .card-num,
+#card-2 .card-expire-date,
+#card-2 .card-holder-name,
+#card-2 #visa-img,
+#card-2 .bold{
+    text-shadow: 1px 1px 1px rgb(43,43,43);
+    filter: drop-shadow(2px 2px 1px rgb(43, 43, 43));
+}
+/******** card 3 ********/
+#card-3{
+    backdrop-filter: blur(7px);
+    border-color: #ff4444;
+    background-image: var(--card-bg-3);
+}
+#bg-image-card-3{
+    opacity: .1;
+    object-fit: cover;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+#card-3 .card-num,
+#card-3 .card-expire-date,
+#card-3 .card-holder-name,
+#card-3 #visa-img,
+#card-3 .bold{
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    filter: drop-shadow(2px 2px 1px rgb(255, 0, 0));
+}
+/************************* media **************************/
+@media(max-width: 800px){
+    #menu-icon{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    nav{
+        overflow: hidden;
+        background-color: var(--bg-color);
+        z-index: 5;
+        top: -100%;
+        left: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .5s linear;
+    }
+}
